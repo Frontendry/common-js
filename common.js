@@ -20,6 +20,8 @@
         $tabArea = $('.tabular-module');
 
     var app = {
+        
+        // Initialize below methods.
         init: function() {
             $document.ready(
                 this.menuAction(),
@@ -31,10 +33,12 @@
                 this.tabAction()
             )
         },
+        
         // Add Class To 'LI' that contain 'UL' mostly used for Drop Down Menus
         menuAction: function() {
             mainMenuLi.addClass('has-ul');
         },
+        
         // Create Off-Canvas Menus for Mobile Devices
         mobileMenu: function() {
             var mobileMenuMethods = {
@@ -71,6 +75,7 @@
                 $(this).find('ul').slideToggle();
             });
         },
+        
         // Convert html Img tags to CSS Background Images
         imgToBg: function() {
             $imgCont.length && $imgCont.each(function() {
@@ -83,6 +88,7 @@
                 img.remove();
             });
         },
+        
         // Using Sticky Columns thanks to Theia Sticky Plugin (https://github.com/WeCodePixels/theia-sticky-sidebar)
         stickyColumns: function() {
             if ($columns.length) {
@@ -90,7 +96,7 @@
             }
         },
 
-        // Using Pop Up thanks Magnific Popup Plugin (https://github.com/dimsemenov/Magnific-Popup)
+        // Using a sleek popup thanks to Magnific Popup Plugin (https://github.com/dimsemenov/Magnific-Popup)
         popupGallery: function() {
             if ($popupGallery.length) {
                 $popupGallery.magnificPopup({
@@ -109,6 +115,7 @@
                 });
             }
         },
+        
         // Revealing Search Box on Click
         searchReveal: function() {
             if ($searchForm.length) {
@@ -146,6 +153,7 @@
             });
         }
     }
+    // Call init Method
     app.init();
 
 })(jQuery);
